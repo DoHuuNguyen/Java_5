@@ -17,7 +17,7 @@
     <p>Tên : <input type="text" name="ten"></p>
     <button type="submit">Seach</button>
 </form>
-<button>Add</button>
+<a href="/giang-vien/view-add" class="btn btn-primary">ADD</a>
 <a href="/giang-vien/hien-thi/giang-vien-nu" class="btn btn-primary">Giảng Viên Nữ</a>
 <table class="table">
     <thead>
@@ -41,7 +41,9 @@
             <td><c:if test="${gv.gioiTinh ==false}">Nữ</c:if>
                 <c:if test="${gv.gioiTinh ==true}">Nam</c:if></td>
             <td>${gv.diaChi}</td>
-            <td><button>Detail</button><button>delete</button><button>update</button></td>
+            <td><button><a href="/giang-vien/detail/${gv.id}">Detail</a></button>
+                <button><a href="/giang-vien/remove/${gv.id}">delete</a></button>
+                <button><a href="/giang-vien/view-update/${gv.id}">update</a></button></td>
         </tr>
     </c:forEach>
 

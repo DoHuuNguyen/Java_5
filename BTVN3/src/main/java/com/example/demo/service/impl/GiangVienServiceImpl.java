@@ -38,10 +38,52 @@ public class GiangVienServiceImpl implements GiangVienService {
     public List<GiangVien> getByGioiTinh() {
         List<GiangVien> list = new ArrayList<>();
         for (GiangVien gv : gvs) {
-            if (gv.getGioiTinh()==false) {
+            if (gv.getGioiTinh() == false) {
                 list.add(gv);
             }
         }
         return list;
+    }
+
+    @Override
+    public GiangVien detailGiangVien(String id) {
+        for (GiangVien gv : gvs
+        ) {
+            if (gv.getId().equalsIgnoreCase(id)) {
+                return gv;
+            }
+        }
+        return null;
+    }
+    public int getIndex(String id){
+        for (int i = 0; i < gvs.size(); i++) {
+            GiangVien gv = gvs.get(i);
+            if (gv.getId().equalsIgnoreCase(id)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public void deleteGiangVien(String id) {
+        GiangVien gv =detailGiangVien(id);
+        gvs.remove(gv);
+    }
+
+    @Override
+    public void addGiangVien(GiangVien gv) {
+        gvs.add(gv);
+    }
+
+    @Override
+    public void updateGiangVien(GiangVien gv) {
+        System.out.println(gv);
+        int index = getIndex(gv.getId());
+        System.out.println(index);
+        gvs.set(index,gv);
+//        GiangVien giangVien = detailGiangVien(gv.getId());
+//        System.out.println(giangVien);
+//        gvs.set(Integer.valueOf(giangVien.getId()),gv);
     }
 }

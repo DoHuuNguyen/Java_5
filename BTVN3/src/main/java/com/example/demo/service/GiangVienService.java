@@ -8,4 +8,8 @@ public interface GiangVienService {
     List<GiangVien> getAll();
     List<GiangVien> getByName(String name);
     List<GiangVien> getByGioiTinh();
+    GiangVien detailGiangVien(String id);
+    void deleteGiangVien(String id);
+    void addGiangVien(GiangVien gv);
+    void updateGiangVien(GiangVien gv);
 }

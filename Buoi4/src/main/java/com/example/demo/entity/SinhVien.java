@@ -13,11 +13,16 @@ import lombok.ToString;
 @Setter
 @ToString
 @Builder
-public class GiangVien {
-    private String id;
-    private String ma;
+
+public class SinhVien {
+
+    private String mssv;
+
     private String ten;
+
     private Integer tuoi;
-    private Boolean gioiTinh;
+
     private String diaChi;
+
+    private Boolean gioiTinh;
 }
