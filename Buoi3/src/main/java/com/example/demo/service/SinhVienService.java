@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface SinhVienService {
     List<SinhVien>getALl();
+    void addSV(SinhVien sv);
 }
