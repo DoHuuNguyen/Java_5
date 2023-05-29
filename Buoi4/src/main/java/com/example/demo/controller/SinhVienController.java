@@ -22,18 +22,20 @@ public class SinhVienController {
     private List<SinhVien> sv = new ArrayList<>();
 
     @GetMapping("/sinhVien")
-    public String hienThiSinhVien(Model model){
+    public String hienThiSinhVien(Model model) {
         sv = sinhVienService.getALl();
-        model.addAttribute("lists",sv);
+        model.addAttribute("lists", sv);
         return "/buoi3/sinhviens";
     }
+
     @GetMapping("/sinhVien/viewAdd")
-    public String goAdd(){
+    public String goAdd() {
         return "/buoi3/add-sinh-vien";
     }
+
     @PostMapping("/sinhVien/add")
-    public String addSv(Model model,@RequestParam("mssv") String mssv,@RequestParam("ten") String ten,@RequestParam("tuoi") Integer tuoi,@RequestParam("diaChi") String diaChi,@RequestParam("gioiTinh") Boolean gioiTinh){
-        sinhVienService.addSv(new SinhVien(mssv,ten,tuoi,diaChi,gioiTinh));
+    public String addSv(Model model, @RequestParam("mssv") String mssv, @RequestParam("ten") String ten, @RequestParam("tuoi") Integer tuoi, @RequestParam("diaChi") String diaChi, @RequestParam("gioiTinh") Boolean gioiTinh) {
+        sinhVienService.addSv(new SinhVien(mssv, ten, tuoi, diaChi, gioiTinh));
 //        sv = sinhVienService.getALl();
 //        model.addAttribute("lists",sv);
 //        SinhVien svs = SinhVien.builder().mssv(mssv).ten(ten).build();
@@ -42,15 +44,17 @@ public class SinhVienController {
 //        model.addAttribute("lists",sv);
         return "redirect:/sinhVien";
     }
+
     @PostMapping("/sinhVien/Search")
-    public String searchSv(Model model,@RequestParam("ten") String name){
-        model.addAttribute("lists",sinhVienService.getByName(name));
+    public String searchSv(Model model, @RequestParam("ten") String name) {
+        model.addAttribute("lists", sinhVienService.getByName(name));
         return "/buoi3/sinhviens";
     }
+
     @GetMapping("/sinhVien/detail/{ma}")
-    public String detailSv(@PathVariable("ma") String mssv,Model model){
+    public String detailSv(@PathVariable("ma") String mssv, Model model) {
         SinhVien sv = sinhVienService.detailSv(mssv);
-        model.addAttribute("sv",sv);
+        model.addAttribute("sv", sv);
         return "/buoi3/detail-sinh-vien";
     }
 }

@@ -14,7 +14,7 @@
 </head>
 <body>
 <div style="border: solid 1px black; border-radius: 20px">
-    <form:form modelAttribute="giangVien" action="/giangVien/update" method="post" style="margin: 10px" >
+    <form:form modelAttribute="giangVien" action="/giangVien/update" method="post" style="margin: 10px">
         <div class="mb-3 row">
             <label class="col-sm-2 col-form-label">Mã Giảng Viên :</label>
             <div class="col-sm-10">
@@ -25,21 +25,21 @@
         <div class="mb-3 row">
             <label class="col-sm-2 col-form-label">Tên :</label>
             <div class="col-sm-10">
-                <form:input path="ten"  class="form-control" value="${gv.ten}"/> <br>
+                <form:input path="ten" class="form-control" value="${gv.ten}"/> <br>
                 <form:errors path="ten" cssStyle="color: red"/>
             </div>
         </div>
         <div class="mb-3 row">
             <label class="col-sm-2 col-form-label">Tuổi :</label>
             <div class="col-sm-10">
-                <form:input path="tuoi"  class="form-control" value="${gv.tuoi}" type="number"/> <br>
+                <form:input path="tuoi" class="form-control" value="${gv.tuoi}" type="number"/> <br>
                 <form:errors path="tuoi" cssStyle="color: red"/>
             </div>
         </div>
         <div class="mb-3 row">
             <label class="col-sm-2 col-form-label">Quê Quán :</label>
             <div class="col-sm-10">
-                <form:input path="queQuan"  class="form-control" value="${gv.queQuan}"/> <br>
+                <form:input path="queQuan" class="form-control" value="${gv.queQuan}"/> <br>
                 <form:errors path="queQuan" cssStyle="color: red"/>
             </div>
         </div>

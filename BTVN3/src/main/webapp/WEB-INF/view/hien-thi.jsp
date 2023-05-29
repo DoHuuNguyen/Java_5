@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %><!doctype html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!doctype html>
 <html lang="en">
 <head>
     <title>Title</title>
@@ -41,9 +42,11 @@
             <td><c:if test="${gv.gioiTinh ==false}">Nữ</c:if>
                 <c:if test="${gv.gioiTinh ==true}">Nam</c:if></td>
             <td>${gv.diaChi}</td>
-            <td><button><a href="/giang-vien/detail/${gv.id}">Detail</a></button>
+            <td>
+                <button><a href="/giang-vien/detail/${gv.id}">Detail</a></button>
                 <button><a href="/giang-vien/remove/${gv.id}">delete</a></button>
-                <button><a href="/giang-vien/view-update/${gv.id}">update</a></button></td>
+                <button><a href="/giang-vien/view-update/${gv.id}">update</a></button>
+            </td>
         </tr>
     </c:forEach>
 

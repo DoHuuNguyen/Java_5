@@ -57,8 +57,8 @@ public class SanPhamServiceImpl implements SanPhamService {
     public List<SanPham> getByName(String name) {
         List<SanPham> sp = new ArrayList<>();
         for (SanPham sps : sanPhamList
-             ) {
-            if(sps.getTen().endsWith(name)){
+        ) {
+            if (sps.getTen().endsWith(name)) {
                 sp.add(sps);
             }
         }

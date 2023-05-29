@@ -16,8 +16,8 @@
 <center><p>${tk}</p></center>
 <center><p>${mk}</p></center>
 <form action="/home" method="post">
-    <p>username:</p><input type="text" placeholder="Enter Username" name="uname" ><br>
-    <p>passworld:</p><input type="password" placeholder="Enter Password" name="psw" ><br>
+    <p>username:</p><input type="text" placeholder="Enter Username" name="uname"><br>
+    <p>passworld:</p><input type="password" placeholder="Enter Password" name="psw"><br>
     <button type="submit">Dang Nhap</button>
 </form>
 

@@ -29,6 +29,6 @@ public class SanPham {
     private String loai;
 
     @NotNull(message = "Không được để trống")
-    @Min(value = 150,message = "Phải lớn hơn 150")
+    @Min(value = 150, message = "Phải lớn hơn 150")
     private Integer gia;
 }

@@ -21,21 +21,22 @@ public class SinhVienController {
     private List<SinhVien> sv = new ArrayList<>();
 
     @GetMapping("/sinhVien")
-    public String hienThiSinhVien(Model model){
+    public String hienThiSinhVien(Model model) {
         sv = sinhVienService.getALl();
-        model.addAttribute("lists",sv);
+        model.addAttribute("lists", sv);
         return "/buoi3/sinhviens";
     }
 
     //c1:
     @GetMapping("/sinhVien/view-add")
-    public String viewAdd(Model model){
-        model.addAttribute("sv",new SinhVien());
+    public String viewAdd(Model model) {
+        model.addAttribute("sv", new SinhVien());
         return "/buoi5/add-sinh-vien";
     }
+
     @PostMapping("/sinhVien/add")
-    public String addSinhVien(@Valid @ModelAttribute("sv") SinhVien sinhvien, BindingResult result){
-        if(result.hasErrors()){
+    public String addSinhVien(@Valid @ModelAttribute("sv") SinhVien sinhvien, BindingResult result) {
+        if (result.hasErrors()) {
             return "/buoi5/add-sinh-vien";
         }
         sinhVienService.addSV(sinhvien);

@@ -6,17 +6,17 @@
     <title>Title</title>
 </head>
 <body>
-            Id: ${gv.id}
+Id: ${gv.id}
 <br>
-            Ma: ${gv.ma}
+Ma: ${gv.ma}
 <br/>
-            Ten: ${gv.ten}
+Ten: ${gv.ten}
 <br/>
-            Tuoi: ${gv.tuoi}
+Tuoi: ${gv.tuoi}
 <br/>
-            Gioi tinh: <c:if test="${gv.gioiTinh ==false}">Nữ</c:if>
-                        <c:if test="${gv.gioiTinh ==true}">Nam</c:if>
+Gioi tinh: <c:if test="${gv.gioiTinh ==false}">Nữ</c:if>
+<c:if test="${gv.gioiTinh ==true}">Nam</c:if>
 <br/>
-            Dia chi:${gv.diaChi}
+Dia chi:${gv.diaChi}
 </body>
 </html>

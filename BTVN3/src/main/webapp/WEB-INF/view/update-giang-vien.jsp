@@ -11,9 +11,9 @@
     <label style="color: red">${thongBaoTen}</label>
     <label style="color: red">${thongBaoTuoi}</label>
     <label style="color: red">${thongBaoDiaChi}</label>
-    ID: <input type="text" name="id"  value="${gv.id}" disabled/>
+    ID: <input type="text" name="id" value="${gv.id}" disabled/>
     <br>
-    Mã: <input type="text" name="ma"  value="${gv.ma}"/>
+    Mã: <input type="text" name="ma" value="${gv.ma}"/>
     <br/>
     Tên: <input type="text" name="ten" value="${gv.ten}"/>
     <br/>

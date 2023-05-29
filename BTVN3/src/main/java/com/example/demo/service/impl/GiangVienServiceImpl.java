@@ -55,7 +55,8 @@ public class GiangVienServiceImpl implements GiangVienService {
         }
         return null;
     }
-    public int getIndex(String id){
+
+    public int getIndex(String id) {
         for (int i = 0; i < gvs.size(); i++) {
             GiangVien gv = gvs.get(i);
             if (gv.getId().equalsIgnoreCase(id)) {
@@ -67,7 +68,7 @@ public class GiangVienServiceImpl implements GiangVienService {
 
     @Override
     public void deleteGiangVien(String id) {
-        GiangVien gv =detailGiangVien(id);
+        GiangVien gv = detailGiangVien(id);
         gvs.remove(gv);
     }
 
@@ -81,7 +82,7 @@ public class GiangVienServiceImpl implements GiangVienService {
         System.out.println(gv);
         int index = getIndex(gv.getId());
         System.out.println(index);
-        gvs.set(index,gv);
+        gvs.set(index, gv);
 //        GiangVien giangVien = detailGiangVien(gv.getId());
 //        System.out.println(giangVien);
 //        gvs.set(Integer.valueOf(giangVien.getId()),gv);

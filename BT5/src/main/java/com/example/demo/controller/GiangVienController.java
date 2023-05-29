@@ -23,13 +23,14 @@ public class GiangVienController {
 
     @GetMapping("/giangVien/hienThi")
     public String hienThiGiangVien(Model model) {
-        model.addAttribute("giangVien",new GiangVien());
+        model.addAttribute("giangVien", new GiangVien());
         model.addAttribute("list", giangVienService.getAll());
         return "/hien-thi";
     }
+
     @PostMapping("/giangVien/add")
-    public String addGiangVien(@Valid @ModelAttribute("giangVien") GiangVien gv, BindingResult result,Model model) {
-        if(result.hasErrors()){
+    public String addGiangVien(@Valid @ModelAttribute("giangVien") GiangVien gv, BindingResult result, Model model) {
+        if (result.hasErrors()) {
             model.addAttribute("list", giangVienService.getAll());
             return "/hien-thi";
         }
@@ -41,7 +42,7 @@ public class GiangVienController {
     @GetMapping("/giangVien/detail/{ma}")
     public String detailGiangVien(Model model, @PathVariable("ma") String ma) {
         GiangVien gv = giangVienService.detailGiangVien(ma);
-        model.addAttribute("giangVien",new GiangVien());
+        model.addAttribute("giangVien", new GiangVien());
         model.addAttribute("gv", gv);
         model.addAttribute("list", giangVienService.getAll());
         return "/hien-thi";
@@ -50,14 +51,14 @@ public class GiangVienController {
     @GetMapping("/giangVien/view-update/{ma}")
     public String viewUpdateGiangVien(Model model, @PathVariable("ma") String ma) {
         GiangVien gv = giangVienService.detailGiangVien(ma);
-        model.addAttribute("giangVien",new GiangVien());
+        model.addAttribute("giangVien", new GiangVien());
         model.addAttribute("gv", gv);
         return "view-update";
     }
 
     @PostMapping("/giangVien/update")
-    public String updateGiangVien(@Valid @ModelAttribute("giangVien") GiangVien gv,BindingResult result) {
-        if(result.hasErrors()){
+    public String updateGiangVien(@Valid @ModelAttribute("giangVien") GiangVien gv, BindingResult result) {
+        if (result.hasErrors()) {
             return "view-update";
         }
         giangVienService.updateGiangVien(gv);

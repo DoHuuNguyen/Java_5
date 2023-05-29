@@ -35,13 +35,13 @@
         Giá: <form:input path="gia" value="${sp.gia}" type="number"/>
         <form:errors path="gia" cssStyle="color: red"/>
         <br>
-        Loại: <form:select path="loai" cssStyle="width: 150px" >
+        Loại: <form:select path="loai" cssStyle="width: 150px">
         <form:option value="Loại 1">Loại 1</form:option>
         <form:option value="Loại 2">Loại 2</form:option>
         <form:option value="Loại 3">Loại 3</form:option>
         <form:option value="Loại 4">Loại 4</form:option>
         <form:option value="Loại 5">Loại 5</form:option>
-                </form:select>
+    </form:select>
         <form:button type="submit" class="btn btn-outline-success">ADD</form:button>
     </form:form>
 </div>
@@ -57,20 +57,20 @@
     </tr>
     </thead>
     <tbody>
-        <c:forEach items="${list}" var="sp">
-            <tr>
-                <td>${sp.id}</td>
-                <td>${sp.ma}</td>
-                <td>${sp.ten}</td>
-                <td>${sp.gia}</td>
-                <td>${sp.loai}</td>
-                <td>
-                    <a href="/san-pham/detail/${sp.id}" class="btn btn-outline-light">Detail</a>
-                    <a href="/san-pham/view-update/${sp.id}" class="btn btn-outline-primary">Update</a>
-                    <a href="/san-pham/delete/${sp.id}" class="btn btn-outline-warning">Delete</a>
-                </td>
-            </tr>
-        </c:forEach>
+    <c:forEach items="${list}" var="sp">
+        <tr>
+            <td>${sp.id}</td>
+            <td>${sp.ma}</td>
+            <td>${sp.ten}</td>
+            <td>${sp.gia}</td>
+            <td>${sp.loai}</td>
+            <td>
+                <a href="/san-pham/detail/${sp.id}" class="btn btn-outline-light">Detail</a>
+                <a href="/san-pham/view-update/${sp.id}" class="btn btn-outline-primary">Update</a>
+                <a href="/san-pham/delete/${sp.id}" class="btn btn-outline-warning">Delete</a>
+            </td>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

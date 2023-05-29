@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
     @GetMapping("/login")
-    public String Login(){
+    public String Login() {
 
         return "Login";
     }
+
     @PostMapping("/ketqua")
-    public String xuLyLogin(Model model,@RequestParam("uname")String name,@RequestParam("psw")String pass){
+    public String xuLyLogin(Model model, @RequestParam("uname") String name, @RequestParam("psw") String pass) {
         //lay gia trị ở ô input (view) sang controller
         //java4: request.getParameter("ten cua ô input")
         //java5: @requetParam
-        model.addAttribute("name",name);
-        model.addAttribute("pass",pass);
+        model.addAttribute("name", name);
+        model.addAttribute("pass", pass);
         model.addAttribute(pass);
         return "ketqua";
     }

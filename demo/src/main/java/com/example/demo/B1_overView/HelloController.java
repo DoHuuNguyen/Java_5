@@ -28,8 +28,8 @@ public class HelloController {
     // c1: GetMapping
 //    @GetMapping("/demo")
     //c2: @RequestMapping
-    @RequestMapping(value = "/demo",method = RequestMethod.GET)
-    public String hienThiHelloWorld(Model model){
+    @RequestMapping(value = "/demo", method = RequestMethod.GET)
+    public String hienThiHelloWorld(Model model) {
         //Truyền giá trị từ phía controller sang view
         //Java4: request.setAttribute("ten bien day sang JSP")
         //gia tri muon truyen sang:  1 list, 1 doi tuong

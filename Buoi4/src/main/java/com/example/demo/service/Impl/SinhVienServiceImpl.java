@@ -48,9 +48,10 @@ public class SinhVienServiceImpl implements SinhVienService {
     @Override
     public SinhVien detailSv(String ma) {
         for (SinhVien sv : sinhViens
-             ) {if(sv.getMssv().equalsIgnoreCase(ma)){
-                 return sv;
-        }
+        ) {
+            if (sv.getMssv().equalsIgnoreCase(ma)) {
+                return sv;
+            }
 
         }
         return null;

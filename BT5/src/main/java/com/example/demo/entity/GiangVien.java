@@ -23,7 +23,7 @@ public class GiangVien {
     @NotBlank(message = "Không được để trống !")
     private String ten;
     @NotNull(message = "Không được để trống !")
-    @Min(value = 25,message = "Tuổi phải lớn hơn 25")
+    @Min(value = 25, message = "Tuổi phải lớn hơn 25")
     private Integer tuoi;
     @NotBlank(message = "Không được để trống !")
     private String queQuan;

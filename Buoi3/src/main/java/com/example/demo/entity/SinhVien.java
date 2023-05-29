@@ -20,7 +20,7 @@ import lombok.ToString;
 public class SinhVien {
 
     @NotEmpty(message = "Không được để trống")
-    @Size(min = 5,message = "Tối thiểu 5 ký tự")
+    @Size(min = 5, message = "Tối thiểu 5 ký tự")
     private String mssv;
 
     @Pattern(regexp = "[a-z A-Z]+")

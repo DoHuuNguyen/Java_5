@@ -20,7 +20,7 @@
     <form:errors path="diaChi"/>
     <br>
     Gioi Tinh: <form:radiobutton value="true" path="gioiTinh" checked="true"/> Nam
-                <form:radiobutton value="false" path="gioiTinh" /> Nu
+    <form:radiobutton value="false" path="gioiTinh"/> Nu
 
     <form:button type="submit">add</form:button>
 </form:form>
