@@ -15,15 +15,15 @@ public interface CategoryReopsitory extends JpaRepository<category, Long> {
     //c2: raw sql
 
     //c1
-   // List<category>findcategoryByAndNameAndID(String categoryNam, Long id);
+    // List<category>findcategoryByAndNameAndID(String categoryNam, Long id);
 
     //c2.1: JPQL (JPA Query language) <=> tương tự gần giống hql
     //Native == false(default)
     @Query("select c from category c where c.name like ?2 and c.ID = ?1")
-    List<category>search(Long id,String category_name);
+    List<category> search(Long id, String category_name);
 
     //c2.2: Native query => truy vấn trên sql
     //Native == true
     @Query(value = "select * from category c where c.catecory_name = ?2 and c.id = ?1", nativeQuery = true)
-    List<category>search1(Long id,String category_name);
+    List<category> search1(Long id, String category_name);
 }

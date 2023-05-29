@@ -12,8 +12,8 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/hien-thi")
-    public String load(Model model){
-        model.addAttribute("list",categoryService.getAll());
+    public String load(Model model) {
+        model.addAttribute("list", categoryService.getAll());
         return "hien-thi";
     }
 }

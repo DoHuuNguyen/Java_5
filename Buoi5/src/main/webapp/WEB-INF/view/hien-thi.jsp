@@ -25,7 +25,7 @@
     </thead>
     <tbody>
     <%--    for(SinhVien sv: list)--%>
-    <c:forEach items="${list}" var="cate" >
+    <c:forEach items="${list}" var="cate">
         <tr>
             <td>${cate.ID}</td>
             <td>${cate.name}</td>
