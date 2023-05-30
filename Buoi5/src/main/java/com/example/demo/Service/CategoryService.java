@@ -1,16 +1,16 @@
 package com.example.demo.Service;
 
-import com.example.demo.Entity.category;
+import com.example.demo.Entity.Category;
 
 import java.util.List;
 
 public interface CategoryService {
 
-    List<category> getAll();
+    List<Category> getAll();
 
-    void addCategory(category category);
+    void addCategory(Category category);
 
-    void updateCategory(category category);
+    void updateCategory(Category category);
 
     void deleteCategory(Long id);
 }

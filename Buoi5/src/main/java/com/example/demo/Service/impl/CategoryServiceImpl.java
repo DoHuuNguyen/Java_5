@@ -1,6 +1,6 @@
 package com.example.demo.Service.impl;
 
-import com.example.demo.Entity.category;
+import com.example.demo.Entity.Category;
 import com.example.demo.Service.CategoryService;
 import com.example.demo.repository.CategoryReopsitory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +15,17 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryReopsitory categoryReopsitory;
 
     @Override
-    public List<category> getAll() {
+    public List<Category> getAll() {
         return categoryReopsitory.findAll();
     }
 
     @Override
-    public void addCategory(category category) {
+    public void addCategory(Category category) {
         categoryReopsitory.save(category);
     }
 
     @Override
-    public void updateCategory(category category) {
+    public void updateCategory(Category category) {
         categoryReopsitory.save(category);
     }
 

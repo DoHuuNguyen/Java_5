@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "category")
-public class category {
+public class Category {
 
     @Id
     @Column(name = "id")
