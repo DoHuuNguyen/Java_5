@@ -20,7 +20,7 @@ import lombok.Setter;
 @Table(name = "lop_hoc")
 public class LopHoc {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "Không được để trống !")
     @Column(name = "name")

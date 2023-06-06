@@ -10,9 +10,12 @@ import java.util.Optional;
 public interface NhanVienService {
 
     List<NhanVien> getAll();
+
     void addNhanVien(NhanVien nv);
-//    Optional<NhanVien> detailNhanVien(String id);
+
+    //    Optional<NhanVien> detailNhanVien(String id);
 //    void removeNhanVien(String id);
     List<ChucVu> listCV();
+
     List<CuaHang> listCH();
 }

@@ -26,16 +26,16 @@
     </tr>
     </thead>
     <tbody>
-        <c:forEach items="${list}" var="pr"  varStatus="i">
-            <tr>
-                <td>${i.index+1}</td>
-                <td>${pr.productCode}</td>
-                <td>${pr.productName}</td>
-                <td>${pr.price}</td>
-                <td>${pr.category.name}</td>
-                <td>${pr.category.code}</td>
-            </tr>
-        </c:forEach>
+    <c:forEach items="${list}" var="pr" varStatus="i">
+        <tr>
+            <td>${i.index+1}</td>
+            <td>${pr.productCode}</td>
+            <td>${pr.productName}</td>
+            <td>${pr.price}</td>
+            <td>${pr.category.name}</td>
+            <td>${pr.category.code}</td>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

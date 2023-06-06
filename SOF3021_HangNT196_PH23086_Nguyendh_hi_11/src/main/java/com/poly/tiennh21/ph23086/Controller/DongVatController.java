@@ -1,8 +1,6 @@
 package com.poly.tiennh21.ph23086.Controller;
 
 import com.poly.tiennh21.ph23086.Entity.DongVat;
-import com.poly.tiennh21.ph23086.Service.DongVatService;
-import com.poly.tiennh21.ph23086.Service.Impl.DongVatServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

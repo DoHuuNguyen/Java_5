@@ -4,11 +4,13 @@
 
 # Config_JAVA_WEB
 
-## Config jsp 
+## Config jsp
+
 ```
 spring.mvc.view.prefix: /WEB-INF/view/
 spring.mvc.view.suffix: .jsp
 ```
+
 ## Hibernate
 
 ```
@@ -18,14 +20,18 @@ spring.mvc.view.suffix: .jsp
     <version>5.6.10.Final</version>
 </dependency>
 ```
-## Nhúng Tomcat 
+
+## Nhúng Tomcat
+
 ```
 <dependency>
     <groupId>org.apache.tomcat.embed</groupId>
     <artifactId>tomcat-embed-jasper</artifactId>
 </dependency>
 ```
-## JSTL 
+
+## JSTL
+
 ```
 <dependency>
     <groupId>jakarta.servlet.jsp.jstl</groupId>
@@ -40,6 +46,7 @@ spring.mvc.view.suffix: .jsp
 ```
 
 ## Lombox
+
 ```
 <dependency>
     <groupId>org.projectlombok</groupId>
@@ -50,6 +57,7 @@ spring.mvc.view.suffix: .jsp
 ```
 
 ## MSSQL JDBC
+
 ``` 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
@@ -59,6 +67,7 @@ spring.mvc.view.suffix: .jsp
 ```
 
 ## MySQL
+
 ``` 
 <dependency>
     <groupId>mysql</groupId>
@@ -67,7 +76,8 @@ spring.mvc.view.suffix: .jsp
 </dependency>
 ```
 
-## JPA 
+## JPA
+
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -75,23 +85,42 @@ spring.mvc.view.suffix: .jsp
 </dependency>
 ```
 
-## Spring Validator 
+## Spring Validator
+
 ``` 
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
-## Loop - JSTL 
+## SQL
+```
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=PTPM_FINALLY_JAVA_SOF3021;encrypt=true;trustServerCertificate=true;
+spring.datasource.username=sa
+spring.datasource.password=123456
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+```
+
+## Loop - JSTL
+
 ```
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 ```
 
-## Form - JSTL 
+## Form - JSTL
+
 ``` 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 ```
+
 ## Form java language
+
 ```
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 ```

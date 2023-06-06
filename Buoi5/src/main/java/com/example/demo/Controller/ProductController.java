@@ -13,7 +13,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/product/hien-thi")
-    public String view(Model model){
+    public String view(Model model) {
         model.addAttribute("list", productService.getAll());
         return "product-view";
     }

@@ -25,34 +25,38 @@ public class LopHocController {
     private LopHocService lopHocService;
 
     @GetMapping("/lop-hoc/hien-thi")
-    public String hienThi(Model model){
-        model.addAttribute("list",lopHocService.getAll());
+    public String hienThi(Model model) {
+        model.addAttribute("list", lopHocService.getAll());
         model.addAttribute("lp", new LopHoc());
         return "hien-thi";
     }
+
     @PostMapping("/lop-hoc/add")
-    public String addLopHoc(@Valid @ModelAttribute("lp") LopHoc lopHoc, BindingResult result, Model model){
-        if(result.hasErrors()){
-            model.addAttribute("list",lopHocService.getAll());
+    public String addLopHoc(@Valid @ModelAttribute("lp") LopHoc lopHoc, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            model.addAttribute("list", lopHocService.getAll());
             return "hien-thi";
         }
         lopHocService.addLopHoc(lopHoc);
         return "redirect:/lop-hoc/hien-thi";
     }
+
     @PostMapping("/lop-hoc/search")
-    public String search(Model model, @RequestParam("ten") String ten,@RequestParam("diaDiem") String diaDiem){
-        model.addAttribute("list",lopHocService.search(ten, diaDiem));
+    public String search(Model model, @RequestParam("ten") String ten, @RequestParam("diaDiem") String diaDiem) {
+        model.addAttribute("list", lopHocService.search(ten, diaDiem));
         model.addAttribute("lp", new LopHoc());
         return "hien-thi";
     }
+
     @GetMapping("/lop-hoc/remove/{id}")
-    public String remove(@PathVariable("id") Long id){
+    public String remove(@PathVariable("id") Long id) {
         lopHocService.deleteLopHoc(id);
         return "redirect:/lop-hoc/hien-thi";
     }
+
     @GetMapping("/lop-hoc/edit/{id}")
-    public String edit(@PathVariable("id") Long id,Model model){
-        model.addAttribute("list",lopHocService.getAll());
+    public String edit(@PathVariable("id") Long id, Model model) {
+        model.addAttribute("list", lopHocService.getAll());
         model.addAttribute("lp", new LopHoc());
         model.addAttribute("lophoc", lopHocService.detail(id));
         return "hien-thi";

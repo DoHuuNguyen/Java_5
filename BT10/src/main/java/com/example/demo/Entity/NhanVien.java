@@ -51,11 +51,11 @@ public class NhanVien {
     private Date ngaySinh;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "IdCV",referencedColumnName = "Id")
+    @JoinColumn(name = "IdCV", referencedColumnName = "Id")
     private ChucVu chucVu;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "IdCH",referencedColumnName = "Id")
+    @JoinColumn(name = "IdCH", referencedColumnName = "Id")
     private CuaHang cuaHang;
 
 }
