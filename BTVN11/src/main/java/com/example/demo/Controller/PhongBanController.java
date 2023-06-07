@@ -44,4 +44,17 @@ public class PhongBanController {
         model.addAttribute("pbn",new PhongBan());
         return "update";
     }
+    @GetMapping("/phong-ban/detail/{id}")
+    public String detail(Model model, @PathVariable("id")UUID id){
+        model.addAttribute("pbdt",phongBanService.detailPhongBan(id));
+        model.addAttribute("listLpb",phongBanService.listLPB());
+        model.addAttribute("list",phongBanService.getAll());
+        model.addAttribute("pb",new PhongBan());
+        return "hienthi";
+    }
+    @PostMapping("/phong-ban/update")
+    public String update(@Valid @ModelAttribute("pbn") PhongBan pbn,BindingResult result,Model model){
+        phongBanService.addPhongBan(pbn);
+        return "redirect:/phong-ban/hien-thi";
+    }
 }

@@ -17,13 +17,15 @@
 
 <div style="border: solid 1px red ;border-radius: 30px; margin: auto">
     <form:form action="/phong-ban/add" method="post" modelAttribute="pb" cssStyle="margin: 20px">
-        Mã: <form:input path="ma" class="form-control"/>
-        Tên: <form:input path="ten" class="form-control"/>
-        Số Lượng Phòng Ban: <form:input path="soLuongPhongBan" class="form-control"/>
-        Số Lượng Nhân Viên: <form:input path="soLuongNhanVien" class="form-control"/>
-        Loại phòng ban: <form:select path="loaiPhongBan" class="form-control">
+        Mã: <form:input path="ma" class="form-control" value="${pbdt.ma}"/>
+        Tên: <form:input path="ten" class="form-control" value="${pbdt.ten}"/>
+        Số Lượng Phòng Ban: <form:input path="soLuongPhongBan" class="form-control" value="${pbdt.soLuongPhongBan}"/>
+        Số Lượng Nhân Viên: <form:input path="soLuongNhanVien" class="form-control" value="${pbdt.soLuongNhanVien}"/>
+        Loại phòng ban: <form:select path="loaiPhongBan" class="form-control" value="${pbdt.loaiPhongBan.ten}">
         <form:options items="${listLpb}" itemLabel="ten" itemValue="id"/>
     </form:select> <br>
+        Trạng Thái: <form:radiobutton path="trangThai" value="1" checked="true"/> có
+                    <form:radiobutton path="trangThai" value="0"/> Không
         <form:button class="btn btn-outline-success" type="submit">ADD</form:button>
     </form:form>
 </div>
@@ -50,7 +52,8 @@
             <td>${pb.soLuongNhanVien}</td>
             <td>${pb.trangThai}</td>
             <td>${pb.loaiPhongBan.ten}</td>
-            <td><a class="btn btn-outline-success" href="/phong-ban/view-update/${pb.id}">Update</a> </td>
+            <td><a class="btn btn-outline-success" href="/phong-ban/view-update/${pb.id}">Update</a>
+                <a class="btn btn-outline-success" href="/phong-ban/detail/${pb.id}">detail</a></td>
         </tr>
     </c:forEach>
     </tbody>

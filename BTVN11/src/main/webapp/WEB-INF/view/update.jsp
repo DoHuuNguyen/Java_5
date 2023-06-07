@@ -17,13 +17,16 @@
 
 <div style="border: solid 1px red ;border-radius: 30px; margin: auto">
     <form:form action="/phong-ban/update" method="post" modelAttribute="pbn" cssStyle="margin: 20px">
+        ID: <form:input path="id" class="form-control" value="${pb.id}" readonly="true"/>
         Mã: <form:input path="ma" class="form-control" value="${pb.ma}"/>
         Tên: <form:input path="ten" class="form-control" value="${pb.ten}"/>
         Số Lượng Phòng Ban: <form:input path="soLuongPhongBan" class="form-control" value="${pb.soLuongPhongBan}"/>
         Số Lượng Nhân Viên: <form:input path="soLuongNhanVien" class="form-control" value="${pb.soLuongNhanVien}"/>
         Loại phòng ban: <form:select path="loaiPhongBan" class="form-control" value="${pb.loaiPhongBan}">
-        <form:options items="${listLpb}" itemLabel="ten" itemValue="id" value="${pb.loaiPhongBan}"/>
+        <form:options items="${listLpb}" itemLabel="ten" itemValue="id"/>
     </form:select> <br>
+        Trạng Thái: <form:radiobutton path="trangThai" value="1"/> có
+        <form:radiobutton path="trangThai" value="0"/> Không
         <form:button class="btn btn-outline-success" type="submit">Update</form:button>
     </form:form>
 </div>

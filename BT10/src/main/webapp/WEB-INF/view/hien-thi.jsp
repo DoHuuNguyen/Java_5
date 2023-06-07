@@ -32,7 +32,7 @@
     Chức Vụ: <form:select path="chucVu" cssStyle="width: 100px">
     <form:options items="${listCv}" itemValue="id" itemLabel="ten"/>
 </form:select><br><br>
-    Năm sinh: <select name="nam" style="100px">
+    Năm sinh: <select name="nam" style="width: 100px">
     <c:forEach items="${nam1}" var="n">
         <option value="${n}">${n}</option>
     </c:forEach>
