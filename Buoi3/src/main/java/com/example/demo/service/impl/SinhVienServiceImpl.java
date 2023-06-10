@@ -21,9 +21,4 @@ public class SinhVienServiceImpl implements SinhVienService {
     public List<SinhVien> getALl() {
         return sinhViens;
     }
-
-    @Override
-    public void addSV(SinhVien sv) {
-        sinhViens.add(sv);
-    }
 }
