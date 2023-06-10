@@ -55,7 +55,7 @@
     </form:select> <br>
     TrangThai:<form:radiobutton path="trangThai" value="1" />ConLam
     <form:radiobutton path="trangThai" value="0"/>NghiLam <br>
-    <form:button type="dubmit" class="form-control">Add</form:button>
+    <form:button type="submit" class="form-control">Add</form:button>
 </form:form>
 <table border="1px" class="table">
     <thead>
@@ -71,7 +71,7 @@
         <td>IdCV</td>
         <td>TrangThai</td>
         <td colspan="2">
-            Avtion
+            Action
         </td>
     </tr>
     </thead>

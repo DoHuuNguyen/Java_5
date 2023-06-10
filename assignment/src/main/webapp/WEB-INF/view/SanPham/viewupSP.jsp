@@ -19,7 +19,7 @@
 <form:form action="/san-pham/update/${sanPham.id}" method="post" modelAttribute="sanPham">
     Ma:<form:input path="ma" class="form-control"/>
     Ten:<form:input path="ten" class="form-control"/>
-    <form:button type="dubmit" class="btn btn-success">Update</form:button>
+    <form:button type="submit" class="btn btn-success">Update</form:button>
 </form:form>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

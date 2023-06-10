@@ -31,7 +31,7 @@
     <form:option value="Lao">Lao</form:option>
 </form:select>
     <br>
-    <form:button type="dubmit" class="btn btn-success">Add</form:button>
+    <form:button type="submit" class="btn btn-success">Add</form:button>
 </form:form>
 <table border="1px" class="table">
     <thead>

@@ -46,7 +46,7 @@
     SoLuongTon:<form:input path="soLuongTon" type="number" class="form-control"/> <br>
     GiaNhap:<form:input path="giaNhap" type="text" class="form-control"/> <br>
     GiaBan:<form:input path="giaBan" type="text" class="form-control"/> <br>
-    <form:button type="dubmit" class="btn btn-outline-danger" >Update</form:button>
+    <form:button type="submit" class="btn btn-outline-danger" >Update</form:button>
 </form:form>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

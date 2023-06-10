@@ -11,7 +11,7 @@
 <form:form action="/nsx/update/${nsx.id}" method="post" modelAttribute="nsx">
     Ma:<form:input path="ma"/>
     Ten:<form:input path="ten"/>
-    <form:button type="dubmit">Update</form:button>
+    <form:button type="submit">Update</form:button>
 </form:form>
 </body>
 </html>

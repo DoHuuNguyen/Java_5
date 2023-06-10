@@ -21,7 +21,7 @@
     <form:errors path="ma" cssStyle="color: red"/><br>
     Ten:<form:input path="ten" class="form-control"/><br>
     <form:errors path="ten" cssStyle="color: red"/><br>
-    <form:button type="dubmit" class="btn btn-success">Add</form:button>
+    <form:button type="submit" class="btn btn-success">Add</form:button>
 </form:form>
 <table border="1px" class="table">
     <thead>

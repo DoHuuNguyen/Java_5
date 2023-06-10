@@ -40,7 +40,7 @@
     </form:select> <br>
     TrangThai:<form:radiobutton path="trangThai" value="1"/>ConLam
     <form:radiobutton path="trangThai" value="0"/>NghiLam<br>
-    <form:button type="dubmit" class="btn btn-success">Update</form:button>
+    <form:button type="submit" class="btn btn-success">Update</form:button>
 </form:form>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
